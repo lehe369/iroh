@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const SECTION_LINKS = [
   { href: "#estate", label: "The Estate" },
@@ -44,9 +45,20 @@ export default function Nav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5 sm:px-10">
         <a
           href="#top"
-          className="font-serif text-lg tracking-[0.14em] text-parchment glow-on-hover"
+          className="glow-on-hover flex items-center gap-3"
+          aria-label="IROH — home"
         >
-          IROH
+          <Image
+            src="/logo.png"
+            alt=""
+            width={426}
+            height={490}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
+          <span className="font-serif text-lg tracking-[0.14em] text-parchment">
+            IROH
+          </span>
         </a>
 
         <nav
